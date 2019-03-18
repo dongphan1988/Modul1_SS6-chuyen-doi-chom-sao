@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+nhập vào số thứ nhất :
+<input type="text" id="number1"/>
+nhập vào số thứ 2 :
+<input type="text" id="number2"/>
+<button type="button" onclick="check()">kiểm tra</button>
+kết quả
+<p id="view"></p>
+<script>
+    function check() {
+        let value1 = parseFloat(document.getElementById("number1").value);
+        let value2 = parseFloat(document.getElementById("number2").value);
+        if(value1>value2){
+            document.getElementById("view").innerHTML = "tham số 1 lớn hơn tham số 2";
+        }else{
+            document.getElementById("view").innerHTML = (value1 + value2);
+        }
+    }
+</script>
+</body>
+</html>

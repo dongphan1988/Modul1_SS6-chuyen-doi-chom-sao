@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập tên ngôi sao:
+<input type="text" id="ar1"/>
+Thuộc chòm sao :
+<input type="text" disabled id="ar2"/>
+<button type="button" onclick="check()">Translate</button>
+<script>
+    function check() {
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", 'Altair', "Dubhe", "Regulus"];
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major ", "Leo"];
+    let a = document.getElementById("ar1").value;
+    for (let i = 0; i < arr1.length; i++) {
+        if (a == arr1[i]) {
+            document.getElementById("ar2").value = arr2[i];
+            break;
+        } else {
+            document.getElementById("ar2").value = "viết sai nhập lại";
+            break;
+        }
+    }
+}
+</script>
+</body>
+</html>
